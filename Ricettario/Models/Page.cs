@@ -8,7 +8,6 @@ namespace Ricettario.Models
 {
     public class Page
     {
-
         private int _id;
 
         public int Id

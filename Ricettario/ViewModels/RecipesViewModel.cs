@@ -26,7 +26,7 @@ namespace Ricettario.ViewModels
         }
         private Page _spage;
 
-        private const int MAX_ELEMENT_FOR_PAGE = 2;
+        private const int MAX_ELEMENT_FOR_PAGE = 4;
 
         public Page SPage
         {
@@ -45,8 +45,8 @@ namespace Ricettario.ViewModels
             set { _spage = value; }
         }
 
+    
 
-      
         public RecipesViewModel()
         {
 
@@ -59,16 +59,13 @@ namespace Ricettario.ViewModels
 
         public void Aggiorna()
         {
-          //  MessageBox.Show("aggiornato");
+           MessageBox.Show("aggiornato");
 
         }
 
+     
 
-        public void SelectionChanged()
-        {
-          //  MessageBox.Show("cambia");
 
-        }
 
         private void GetRecipes()
 
@@ -140,6 +137,9 @@ namespace Ricettario.ViewModels
           //  if (e.NewItems != null) SelectedItem = (string)e.NewItems[e.NewItems.Count - 1];
 
         }
+
+
+      
 
     }
 }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Ricettario.Models;
+using Ricettario.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +22,19 @@ namespace Ricettario.Views
     /// </summary>
     public partial class RecipeControl : UserControl
     {
+
+        public static readonly RoutedEvent ClickB1Event = EventManager.RegisterRoutedEvent(
+         "ClickB1", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(RecipeControl));
+
+  
+
+        public event RoutedEventHandler ClickB1
+        {
+            add { AddHandler(ClickB1Event, value); }
+            remove { RemoveHandler(ClickB1Event, value); }
+        }
+        
+
         public RecipeControl()
         {
             InitializeComponent();
@@ -27,8 +42,20 @@ namespace Ricettario.Views
            
         }
 
-      
-       
+        private void DettaglioRicetta_Click(object sender, RoutedEventArgs e)
+        {
+
+           var model =  DataContext as RecipeModel;
+
+
+            GlobalVars.ultimoIDClikkato = model.Id;
+
+
+          //  RaiseEvent(new RoutedEventArgs(ClickB1Event));
+
+
+
+        }
     }
 
 }

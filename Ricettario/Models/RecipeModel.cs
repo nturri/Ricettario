@@ -12,15 +12,15 @@ namespace Ricettario.Models
         public int Id { get; set; }
         public long AggregatedTime { get; set; } = 45;
 
-        public String Level { get; set; } = "facile";
+        public string Level { get; set; } = "facile";
 
-        public String Minutes { get; set; } = "Tempo di preparazione: 20m. Tempo di cottura: 25m";
+        public string Minutes { get; set; } = "Tempo di preparazione: 20m. Tempo di cottura: 25m";
 
-        public String Name { get; set; } = "Risotto ai funghi porcini e salsiccia";
+        public string Name { get; set; } = "Risotto ai funghi porcini e salsiccia";
 
-        public String People { get; set; } = "4";
+        public string People { get; set; } = "4";
 
-        public String PicturePath { get; set; } = "http://www.forchettina.it/public/it/risotto-funghi-salsiccia.jpg";
+        public string PicturePath { get; set; } = "http://www.forchettina.it/public/it/risotto-funghi-salsiccia.jpg";
 
         public DateTime PubDate { get; set; }
 

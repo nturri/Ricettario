@@ -8,5 +8,16 @@ namespace Ricettario.Models
 {
     public class IngredientModel
     {
+
+        public string Name{ get; set; } = "aceto";
+
+        public string Note { get; set; } 
+
+        public string Quantity { get; set; }
+
+        public string Tag { get; set; } 
+
+
+
     }
 }

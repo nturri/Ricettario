@@ -12,25 +12,15 @@ namespace Ricettario
     public class RicetteService
     {
         private string _urlRecipe ="http://forchettina.azurewebsites.net/api/recipes/homepagerecipes";
+        
+        private string _urlIngredient = "http://forchettina.azurewebsites.net/api/recipes/get/";
+
         public  RicetteService()
         { 
         
         }
-        /*
-        public async Task<List<RecipeModel>>  _GetRicette()
-        {
 
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("http://forchettina.azurewebsites.net/api/recipes/homepagerecipes");
-            response.EnsureSuccessStatusCode();
-            string responseBody = await response.Content.ReadAsStringAsync();
-
-
-           var ricette = JsonConvert.DeserializeObject< List<RecipeModel>> (responseBody);
-
-            return ricette;
-        }
-        */
+        //// ReturnContinentModels = new AsyncObservableCollection<ContentModel>(root.products);
 
         public async Task<List<RecipeModel>> GetRecipeModels()
         {
@@ -48,8 +38,6 @@ namespace Ricettario
                                 string responseBody = await HttpContent.ReadAsStringAsync();
                                 return JsonConvert.DeserializeObject<List<RecipeModel>>(responseBody);
 
-
-                               // ReturnContinentModels = new AsyncObservableCollection<ContentModel>(root.products);
                             }
                     }
                 }
@@ -64,21 +52,38 @@ namespace Ricettario
             return ReturnContinentModels;
         }
 
-        /*
-        public async Task<List<IngredientModel>> GetRicetta(string id)
+
+        public async Task<RecipeFullModel> GetIngredientModels(string id)
         {
+            RecipeFullModel ReturnContinentModels = new RecipeFullModel();
+            try
+            {
+                using (HttpClient httpClient = new HttpClient())
+                {
+                    httpClient.DefaultRequestHeaders.Add("Accept", "application/json;charset=UTF-8");
+                    using (HttpResponseMessage HttpResponseMessage = await httpClient.GetAsync(string.Concat(_urlIngredient, id), HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(false))
+                    {
+                        if (HttpResponseMessage.StatusCode == System.Net.HttpStatusCode.OK)
+                            using (HttpContent HttpContent = HttpResponseMessage.Content)
+                            {
+                                string responseBody = await HttpContent.ReadAsStringAsync();
+                                return JsonConvert.DeserializeObject<RecipeFullModel>(responseBody);
+                           
+                            }
+                    }
+                }
+            }
+            catch (Exception ex)
 
-            HttpClient client = new HttpClient();
-            HttpResponseMessage response = await client.GetAsync("http://forchettina.azurewebsites.net/api/recipes/get/"+id);
-            response.EnsureSuccessStatusCode();
-            string responseBody = await response.Content.ReadAsStringAsync();
+            {
 
+                Console.WriteLine(ex.Message);
 
-            var ricette = JsonConvert.DeserializeObject<List<IngredientModel>>(responseBody);
-
-            return ricette;
+            }
+            return ReturnContinentModels;
         }
-        */
+
+     
 
     }
 }

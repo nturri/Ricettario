@@ -15,29 +15,13 @@ using System.Windows.Shapes;
 namespace Ricettario.Views
 {
     /// <summary>
-    /// Logica di interazione per ShellView.xaml
+    /// Logica di interazione per Window1.xaml
     /// </summary>
-    public partial class RecipesView : Window
+    public partial class IngredientsView : UserControl
     {
-
-        public RecipesView()
+        public IngredientsView()
         {
-
-           InitializeComponent();
-
-            
-
-        }
-
-        private void Window_Activated(object sender, EventArgs e)
-        {
-            ComboPage.SelectedIndex = 0;
-        }
-
-        void UserControl1_ClickB1(object sender, RoutedEventArgs e)
-        {
-
-            Console.WriteLine();
+            InitializeComponent();
         }
     }
 }

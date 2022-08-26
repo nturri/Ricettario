@@ -15,6 +15,9 @@ namespace Ricettario
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
             DisplayRootViewForAsync<RecipesViewModel>();
+
+
+           
         }
     }
 }
