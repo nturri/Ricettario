@@ -15,9 +15,9 @@
 
         <WrapPanel Orientation="Horizontal">
 
-            <TextBlock  Margin="5" x:Name="name"  Text="{Binding Index}" ></TextBlock >
+            <TextBlock  Margin="5" x:Name="name"  Text="{Binding Index}"   ></TextBlock >
 
-            <TextBlock Text="{Binding Path=Value}" Margin="5">
+            <TextBlock Text="{Binding Path=Value}" Margin="5" TextWrapping="Wrap">
                 <TextBlock.Style>
                     <Style TargetType="TextBlock">
                         <Style.Triggers>
@@ -30,7 +30,7 @@
             </TextBlock>
 
 
-            <Image Source="{Binding PicturePath}" Height="50">
+            <Image Source="{Binding PicturePath}" Height="80" Margin="5">
 
             <Image.Style>
                 <Style TargetType="Image">

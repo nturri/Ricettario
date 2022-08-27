@@ -7,6 +7,7 @@ using System.Collections.Specialized;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
+using System.Windows.Input;
 
 namespace Ricettario.ViewModels
 {
@@ -46,7 +47,14 @@ namespace Ricettario.ViewModels
         private const int MAX_ELEMENT_FOR_PAGE = 4;
 
 
-      //  public BaseViewModel IngredientsVM = new IngredientsViewModel(new RecipeFullModel());
+
+        public ICommand Dettaglio { get; private set; }
+
+
+        public ObservableCollection<RecipeModel> Items { get; private set; }
+
+
+        //  public BaseViewModel IngredientsVM = new IngredientsViewModel(new RecipeFullModel());
 
         public Page SPage
         {
@@ -81,12 +89,24 @@ namespace Ricettario.ViewModels
         public RecipesViewModel()
         {
 
-           
+            Dettaglio = new RelayCommand(dettaglioMethod, dettaglioCanExec);
 
             Pages = new ObservableCollection<Page>();
 
             GetRecipes();
 
+
+           
+        }
+
+        private void dettaglioMethod(object param)
+        {
+
+        }
+
+        private bool dettaglioCanExec(object param)
+        {
+            return false; 
         }
 
         public void Aggiorna()
@@ -118,7 +138,9 @@ namespace Ricettario.ViewModels
 
             Pages.CollectionChanged += Items_CollectionChanbged;
 
-          
+
+           
+
 
         }
 
@@ -161,6 +183,8 @@ namespace Ricettario.ViewModels
 
                 if (step.Type == 2)
                 {
+                    step.PicturePath = "http://www.forchettina.it" + step.Value;
+
                     step.Value = "";
                 }
 
@@ -206,12 +230,16 @@ namespace Ricettario.ViewModels
         {
             Ricette.Clear();
 
+            Items = new ObservableCollection<RecipeModel>();
+
             int inizio = page * MAX_ELEMENT_FOR_PAGE;
             int fine = inizio + MAX_ELEMENT_FOR_PAGE;
 
-            for (int i = inizio; i < fine && i<  RicetteFull.Count; i++)
+            for (int i = inizio; i < fine && i < RicetteFull.Count; i++)
+            {
                 Ricette.Add(RicetteFull[i]);
-
+                Items.Add(RicetteFull[i]);
+            }
             RecipeName = Ricette[0].Name;
 
             GetIngredient(Ricette[0].Id.ToString());

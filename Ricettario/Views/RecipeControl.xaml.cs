@@ -22,7 +22,7 @@ namespace Ricettario.Views
     /// </summary>
     public partial class RecipeControl : UserControl
     {
-
+        /*
         public static readonly RoutedEvent ClickB1Event = EventManager.RegisterRoutedEvent(
          "ClickB1", RoutingStrategy.Bubble, typeof(RoutedEventHandler), typeof(RecipeControl));
 
@@ -33,7 +33,7 @@ namespace Ricettario.Views
             add { AddHandler(ClickB1Event, value); }
             remove { RemoveHandler(ClickB1Event, value); }
         }
-        
+        */
 
         public RecipeControl()
         {
@@ -51,11 +51,43 @@ namespace Ricettario.Views
             GlobalVars.ultimoIDClikkato = model.Id;
 
 
-          //  RaiseEvent(new RoutedEventArgs(ClickB1Event));
-
-
 
         }
+
+
+        #region Items
+        public static readonly DependencyProperty ItemsProperty =
+            DependencyProperty.Register(
+                "Items",
+                typeof(IEnumerable<RecipeModel>),
+                typeof(RecipeControl),
+                new UIPropertyMetadata(null));
+        public IEnumerable<RecipeModel> Items
+        {
+            get { return (IEnumerable<RecipeModel>)GetValue(ItemsProperty); }
+            set { SetValue(ItemsProperty, value); }
+        }
+        #endregion
+
+
+        #region Dettaglio
+        public static readonly DependencyProperty DettaglioItemProperty =
+            DependencyProperty.Register(
+                "Dettaglio",
+                typeof(ICommand),
+                typeof(RecipeControl),
+                new UIPropertyMetadata(null));
+        public ICommand Dettaglio
+        {
+            get { return 
+                    
+                    (ICommand)GetValue(DettaglioItemProperty);
+            
+            
+            }
+            set { SetValue(DettaglioItemProperty, value); }
+        }
+        #endregion*/
     }
 
 }
