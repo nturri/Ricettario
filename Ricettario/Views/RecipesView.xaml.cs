@@ -25,8 +25,9 @@ namespace Ricettario.Views
 
            InitializeComponent();
 
-            
-
+            IngredientStep.Children.Add(new Ricettario.Views.IngredientControl());
+            IngredientStep.Children.Add(new Ricettario.Views.IngredientControl());
+            IngredientStep.Children.Add(new Ricettario.Views.IngredientControl());
         }
 
         private void Window_Activated(object sender, EventArgs e)

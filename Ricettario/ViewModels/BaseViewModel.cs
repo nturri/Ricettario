@@ -17,6 +17,12 @@ namespace Ricettario.ViewModels
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        protected void Notify([CallerMemberName] string name = "")
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(name));
+        }
+
+
         protected bool IsDesignMode
         {
             get { return DesignerProperties.GetIsInDesignMode(new System.Windows.DependencyObject()); }

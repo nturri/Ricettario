@@ -3,17 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:Ricettario">
 
+
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary>
-                    <local:Bootstrapper x:Key="Bootstrapper" />
-                </ResourceDictionary>
+            <local:Bootstrapper x:Key="Bootstrapper" />
+        </ResourceDictionary>
 
-                <ResourceDictionary Source="Style/Styles.xaml" />
+        <ResourceDictionary Source="Style/Styles.xaml" />
+        <ResourceDictionary Source="Views/Templates.xaml" />
 
-
-            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
     </Application.Resources>
 </Application>

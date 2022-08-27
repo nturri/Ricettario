@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Ricettario.Views
 {
     /// <summary>
-    /// Logica di interazione per Window1.xaml
+    /// Logica di interazione per IngredientsView.xaml
     /// </summary>
-    public partial class IngredientsView : UserControl
+    public partial class RecipeFullView : UserControl
     {
-        public IngredientsView()
+        public RecipeFullView()
         {
             InitializeComponent();
         }

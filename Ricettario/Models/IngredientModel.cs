@@ -11,9 +11,9 @@ namespace Ricettario.Models
 
         public string Name{ get; set; } = "aceto";
 
-        public string Note { get; set; } 
+        public string Note { get; set; }
 
-        public string Quantity { get; set; }
+        public string Quantity { get; set; } = "1";
 
         public string Tag { get; set; } 
 

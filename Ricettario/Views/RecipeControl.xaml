@@ -90,10 +90,10 @@
             <StackPanel Grid.Row="1" Grid.Column="0">
 
                 <Button x:Name="DettaglioRicetta"  Content="Dettaglio Ricetta" Click="DettaglioRicetta_Click" />
-
+ <!--
                 <Button Command="{Binding RemoveItem, ElementName=root}"
                         CommandParameter="{Binding}">Remove</Button>
-
+-->
             </StackPanel>
 
              <StackPanel Grid.Row="0" Grid.Column="2">

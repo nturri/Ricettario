@@ -121,8 +121,14 @@
     <Compile Include="Models\StepModel.cs" />
     <Compile Include="Service\RicetteService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
-    <Compile Include="ViewModels\IngredientsViewModel.cs" />
+    <Compile Include="ViewModels\RecipeFullViewModel.cs" />
     <Compile Include="ViewModels\RelayCommand.cs" />
+    <Compile Include="Views\IngredientControl.xaml.cs">
+      <DependentUpon>IngredientControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RecipeFullView.xaml.cs">
+      <DependentUpon>RecipeFullView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RecipeControl.xaml.cs">
       <DependentUpon>RecipeControl.xaml</DependentUpon>
     </Compile>
@@ -135,14 +141,22 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Dialog\WindowService.cs" />
-    <Compile Include="Views\IngredientsView.xaml.cs">
-      <DependentUpon>IngredientsView.xaml</DependentUpon>
+    <Compile Include="Views\StepControl.xaml.cs">
+      <DependentUpon>StepControl.xaml</DependentUpon>
     </Compile>
     <Page Include="Dialog\Window1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Style\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\IngredientControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RecipeFullView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -154,9 +168,13 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\IngredientsView.xaml">
+    <Page Include="Views\StepControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Templates.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>

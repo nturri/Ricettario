@@ -8,24 +8,27 @@
            Foreground="White"
                Background="Blue"
          WindowState="Maximized"
-        Title="Ricettario" Height="1024" Width="1600" Activated="Window_Activated">
+        
+         Title="Ricettario"
+      Height="1024" Width="1600" Activated="Window_Activated">
 
     <Grid>
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
             <ColumnDefinition Width="1*" />
+            
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="auto" />
-           
+            <RowDefinition Height="0.1*" />
+            <RowDefinition Height="1*" />
+
         </Grid.RowDefinitions>
 
-        <StackPanel Orientation="Horizontal" Grid.Row="0">
+        <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="1">
 
-          
+
 
             <Button x:Name="Aggiungi" Margin="10" >AGGIUNGI RICETTA</Button>
 
@@ -44,21 +47,21 @@
 
         </StackPanel>
 
-    
-         <StackPanel Orientation="Vertical" Grid.Row="1">
+
+        <StackPanel Orientation="Vertical" Grid.Column="0" Grid.Row="1" >
 
 
 
-                <ItemsControl x:Name="Ricette" >
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
+            <ItemsControl x:Name="Ricette" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
 
-                       
-                            <StackPanel Orientation="Vertical"  >
 
-                            </StackPanel>
+                        <StackPanel Orientation="Vertical"  >
 
-                      
+                        </StackPanel>
+
+
 
                         <!--
 
@@ -74,28 +77,88 @@
 
 
 
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+
+
+                        <local:RecipeControl HorizontalAlignment="Left" VerticalAlignment="Center"   />
+
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+
+
+        </StackPanel>
+
+
+        <ScrollViewer Grid.Column="1" Grid.Row="1"
+              VerticalScrollBarVisibility="Visible"
+              >
+
+            <StackPanel Orientation="Vertical"  Background="BlueViolet"  >
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
+                <TextBlock  Text="Nome della Ricetta" Style="{StaticResource TextStyleBaseTitle}" Margin="10" />
+                <TextBlock  Text="{Binding Path=RecipeName}" Style="{StaticResource TextStyleBase}" Margin="10" />
+            </StackPanel>
+
+            <ItemsControl x:Name="IngredientiRicetta" Background="BurlyWood" >
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <StackPanel Orientation="Vertical"  >
+                        </StackPanel>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+
+
+                        <local:IngredientControl HorizontalAlignment="Left" VerticalAlignment="Center"   />
+
+
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+
+
+            <TextBlock  Text="Step della Ricetta" Style="{StaticResource TextStyleBaseTitle}" Margin="10" />
+
+
+
+            <StackPanel x:Name="IngredientStep" Orientation="Horizontal" >
+
+
+                <ItemsControl x:Name="StepRicetta" Background="BurlyWood" >
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Vertical"  >
+                            </StackPanel>
+                        </ItemsPanelTemplate>
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate>
 
 
-                        <local:RecipeControl HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                            <local:StepControl HorizontalAlignment="Left" VerticalAlignment="Center"   />
+
 
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
 
-      
 
-        </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="1"  >
 
-            <ContentControl Grid.Column="1" Grid.Row="0" Margin="4" VerticalAlignment="Top"
-                        DataContext="{Binding Path=IngredientViewModel}" Content="{Binding}">
+            </StackPanel>
 
-            </ContentControl>
-        </StackPanel>
+
+            </StackPanel>
+
+        </ScrollViewer>
+
+
 
 
     </Grid>

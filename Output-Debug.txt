@@ -1,0 +1,37 @@
+﻿'Ricettario.exe' (CLR v4.0.30319: DefaultDomain): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\mscorlib\v4.0_4.0.0.0__b77a5c561934e089\mscorlib.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: DefaultDomain): caricamento di 'C:\Users\nturri\source\repos\Ricettario\Ricettario\Ricettario\bin\Debug\Ricettario.exe' completato. Simboli caricati.
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\PresentationFramework\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\WindowsBase\v4.0_4.0.0.0__31bf3856ad364e35\WindowsBase.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Core\v4.0_4.0.0.0__b77a5c561934e089\System.Core.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System\v4.0_4.0.0.0__b77a5c561934e089\System.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\PresentationCore\v4.0_4.0.0.0__31bf3856ad364e35\PresentationCore.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xaml\v4.0_4.0.0.0__b77a5c561934e089\System.Xaml.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Remote Debugger\x86\Runtime\Microsoft.VisualStudio.Debugger.Runtime.Desktop.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Configuration\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Configuration.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Xml\v4.0_4.0.0.0__b77a5c561934e089\System.Xml.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\Users\nturri\source\repos\Ricettario\Ricettario\Ricettario\bin\Debug\Caliburn.Micro.Platform.dll' completato. Simboli caricati.
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\Users\nturri\source\repos\Ricettario\Ricettario\Ricettario\bin\Debug\Caliburn.Micro.Core.dll' completato. Simboli caricati.
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\netstandard\v4.0_2.0.0.0__cc7b13ffcd2ddd51\netstandard.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\Users\nturri\source\repos\Ricettario\Ricettario\Ricettario\bin\Debug\Caliburn.Micro.Platform.Core.dll' completato. Simboli caricati.
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\mscorlib.resources\v4.0_4.0.0.0_it_b77a5c561934e089\mscorlib.resources.dll' completato. Modulo compilato senza simboli.
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\Users\nturri\source\repos\Ricettario\Ricettario\Ricettario\bin\Debug\System.Net.Http.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\Users\nturri\source\repos\Ricettario\Ricettario\Ricettario\bin\Debug\Newtonsoft.Json.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Numerics\v4.0_4.0.0.0__b77a5c561934e089\System.Numerics.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization\v4.0_4.0.0.0__b77a5c561934e089\System.Runtime.Serialization.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_32\System.Data\v4.0_4.0.0.0__b77a5c561934e089\System.Data.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\PresentationFramework.Aero2\v4.0_4.0.0.0__31bf3856ad364e35\PresentationFramework.Aero2.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\PresentationFramework.resources\v4.0_4.0.0.0_it_31bf3856ad364e35\PresentationFramework.resources.dll' completato. Modulo compilato senza simboli.
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\Users\nturri\source\repos\Ricettario\Ricettario\Ricettario\bin\Debug\Microsoft.Xaml.Behaviors.dll' completato. Simboli caricati.
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\PresentationFramework-SystemXml\v4.0_4.0.0.0__b77a5c561934e089\PresentationFramework-SystemXml.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\PresentationCore.resources\v4.0_4.0.0.0_it_31bf3856ad364e35\PresentationCore.resources.dll' completato. Modulo compilato senza simboli.
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\PresentationFramework-SystemData\v4.0_4.0.0.0__b77a5c561934e089\PresentationFramework-SystemData.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Deployment\v4.0_4.0.0.0__b03f5f7f11d50a3a\System.Deployment.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Deployment.resources\v4.0_4.0.0.0_it_b03f5f7f11d50a3a\System.Deployment.resources.dll' completato. Modulo compilato senza simboli.
+Eccezione generata: 'System.Deployment.Application.InvalidDeploymentException' in System.Deployment.dll
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'c:\program files\microsoft visual studio\2022\community\common7\ide\commonextensions\microsoft\xamldiagnostics\Framework\x86\Microsoft.VisualStudio.DesignTools.WpfTap.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\SMDiagnostics\v4.0_4.0.0.0__b77a5c561934e089\SMDiagnostics.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.ServiceModel.Internals\v4.0_4.0.0.0__31bf3856ad364e35\System.ServiceModel.Internals.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\UIAutomationTypes\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationTypes.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\UIAutomationProvider\v4.0_4.0.0.0__31bf3856ad364e35\UIAutomationProvider.dll' completato. 
+'Ricettario.exe' (CLR v4.0.30319: Ricettario.exe): caricamento di 'C:\WINDOWS\Microsoft.Net\assembly\GAC_MSIL\System.Runtime.Serialization.resources\v4.0_4.0.0.0_it_b77a5c561934e089\System.Runtime.Serialization.resources.dll' completato. Modulo compilato senza simboli.
+Il programma '[29868] Ricettario.exe' è terminato con il codice 0 (0x0).

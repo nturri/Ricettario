@@ -4,10 +4,18 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
 using System.Windows;
 
 namespace Ricettario.ViewModels
 {
+
+    /*
+     
+     trucco sul globakvars con osservable provare
+     */
+
     public class RecipesViewModel : BaseViewModel
     {
 
@@ -15,9 +23,18 @@ namespace Ricettario.ViewModels
 
         public BindableCollection<RecipeModel> Ricette { get; set; }
 
+        public ObservableCollection<IngredientModel> IngredientiRicetta { get; set; }
+
+        public ObservableCollection<StepModel> StepRicetta { get; set; }
+
+
         public List<RecipeModel> RicetteFull { get; set; }
 
         private ObservableCollection<Page> _pages;
+
+        public string Titolo = "Ricettario";
+
+      
 
         public ObservableCollection<Page> Pages
         {
@@ -27,6 +44,9 @@ namespace Ricettario.ViewModels
         private Page _spage;
 
         private const int MAX_ELEMENT_FOR_PAGE = 4;
+
+
+      //  public BaseViewModel IngredientsVM = new IngredientsViewModel(new RecipeFullModel());
 
         public Page SPage
         {
@@ -47,9 +67,21 @@ namespace Ricettario.ViewModels
 
     
 
+        public RecipesViewModel(BaseViewModel _IngredientsVM)
+        {
+
+           
+
+            Pages = new ObservableCollection<Page>();
+
+            GetRecipes();
+
+        }
+
         public RecipesViewModel()
         {
 
+           
 
             Pages = new ObservableCollection<Page>();
 
@@ -87,6 +119,63 @@ namespace Ricettario.ViewModels
             Pages.CollectionChanged += Items_CollectionChanbged;
 
           
+
+        }
+
+
+        private void GetIngredient(string id)
+        {
+            RicetteService ricetteService = new RicetteService();
+
+
+            Notify();
+
+            var ContentTask = ricetteService.GetIngredientModels(id);
+
+            ContentTask.Wait();
+
+            var recipeFullModel = ContentTask.Result;
+
+            /*if (IngredientiRicetta!=null)
+            IngredientiRicetta.Clear();*/
+
+            IngredientiRicetta = new  ObservableCollection<IngredientModel>();
+
+            StepRicetta = new ObservableCollection<StepModel>();
+
+            foreach (var ingred in recipeFullModel.Ingredients)
+
+               IngredientiRicetta.Add (ingred);
+
+            int countStep = 0;
+
+            foreach (var step in recipeFullModel.Steps)
+            {
+
+                countStep++;
+
+                if (step.Type == 1)
+                {
+                    step.PicturePath = "";
+                }
+
+                if (step.Type == 2)
+                {
+                    step.Value = "";
+                }
+
+
+                step.Index = countStep;
+
+                StepRicetta.Add(step);
+            }
+
+
+            Notify(nameof(IngredientiRicetta));
+
+            Notify(nameof(StepRicetta));
+
+          //  Notify();
         }
 
 
@@ -123,6 +212,9 @@ namespace Ricettario.ViewModels
             for (int i = inizio; i < fine && i<  RicetteFull.Count; i++)
                 Ricette.Add(RicetteFull[i]);
 
+            RecipeName = Ricette[0].Name;
+
+            GetIngredient(Ricette[0].Id.ToString());
 
 
         }
@@ -138,8 +230,48 @@ namespace Ricettario.ViewModels
 
         }
 
+        protected bool SetProperty<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
+        {
+            if (!Equals(field, newValue))
+            {
+                field = newValue;
+                NotifyPropertyChanged(propertyName);
 
-      
+                return true;
+            }
+
+            return false;
+        }
+
+        private string recipeName;
+
+        public string RecipeName { get => recipeName; set => SetProperty(ref recipeName, value); }
+
+
+        protected bool SetProperty2<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
+        {
+            if (!Equals(field, newValue))
+            {
+                field = newValue;
+                NotifyPropertyChanged(propertyName);
+
+                return true;
+            }
+
+            return false;
+        }
+
+        private bool _buttCancel;
+
+        public bool ButtCancel
+        {
+            get { return _buttCancel; }
+            set
+            {
+                _buttCancel = value;
+                NotifyPropertyChanged("ButtCancel");
+            }
+        }
 
     }
 }

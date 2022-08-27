@@ -1,0 +1,4 @@
+﻿Compilazione avviata...
+1>------ Inizio compilazione: Progetto: Ricettario, Configurazione: Debug Any CPU ------
+1>  Ricettario -> C:\Users\nturri\source\repos\Ricettario\Ricettario\Ricettario\bin\Debug\Ricettario.exe
+========== Compilazione: 1 completate, 0 non riuscite, 0 aggiornate, 0 ignorate ==========
