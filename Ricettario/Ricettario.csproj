@@ -136,7 +136,7 @@
     <Compile Include="Models\RecipeFullModel.cs" />
     <Compile Include="Models\RecipeModel.cs" />
     <Compile Include="Models\StepModel.cs" />
-    <Compile Include="Repository\SampleDBContext.cs" />
+    <Compile Include="Repository\DatabaseContext.cs" />
     <Compile Include="Service\RicetteService.cs" />
     <Compile Include="ViewModels\BaseViewModel.cs" />
     <Compile Include="ViewModels\RecipeFullViewModel.cs" />

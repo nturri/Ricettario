@@ -160,8 +160,7 @@ namespace Ricettario.ViewModels
 
             RecipeName = recipeFullModel.Name;
 
-            /*if (IngredientiRicetta!=null)
-            IngredientiRicetta.Clear();*/
+           
 
             IngredientiRicetta = new  ObservableCollection<IngredientModel>();
 
@@ -194,8 +193,18 @@ namespace Ricettario.ViewModels
                 step.Index = countStep;
 
                 StepRicetta.Add(step);
+
+              //  recipeFullModel.StepsAdditionalInfo = "test1";
+               // recipeFullModel.IngredientsAdditionalInfo = "test2";
+
+
+                stepsAdditionalInfo = recipeFullModel.StepsAdditionalInfo;
+                ingredientsAdditionalInfo = recipeFullModel.IngredientsAdditionalInfo;
             }
 
+            /*Notify(nameof(ingredientsAdditionalInfo));
+
+            Notify(nameof(stepsAdditionalInfo));*/
 
             Notify(nameof(IngredientiRicetta));
 
@@ -292,6 +301,23 @@ namespace Ricettario.ViewModels
         public string TitleRecipeName { get => titleRecipeName; set => SetProperty(ref titleRecipeName, value); }
 
 
+
+
+        public string stepsAdditionalInfo;
+
+        public string StepsAdditionalInfo { get => stepsAdditionalInfo; set => SetProperty(ref stepsAdditionalInfo, value); }
+
+
+
+        public string ingredientsAdditionalInfo;
+
+        public string IngredientsAdditionalInfo { get => ingredientsAdditionalInfo; set => SetProperty(ref ingredientsAdditionalInfo, value); }
+
+
+        /*
+
+    public string IngredientsAdditionalInfo
+    */
 
     }
 }
