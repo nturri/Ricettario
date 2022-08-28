@@ -17,7 +17,7 @@
 
             <TextBlock  Margin="5" x:Name="name"  Text="{Binding Index}"   ></TextBlock >
 
-            <TextBlock Text="{Binding Path=Value}" Margin="5" TextWrapping="Wrap">
+            <TextBlock Text="{Binding Path=Value}" Margin="5" TextWrapping="Wrap" >
                 <TextBlock.Style>
                     <Style TargetType="TextBlock">
                         <Style.Triggers>

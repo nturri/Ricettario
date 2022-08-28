@@ -28,7 +28,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50" />
             <RowDefinition Height="1*" />
-
+           
+            
         </Grid.RowDefinitions>
 
         <StackPanel Orientation="Horizontal" Grid.Row="0" Grid.Column="0">
@@ -78,17 +79,19 @@
 
         </ScrollViewer>
 
-        <ScrollViewer Grid.Column="2" Grid.Row="1"
+
+
+        <ScrollViewer Grid.Column="2" Grid.Row="1" Background="BlueViolet"
               VerticalScrollBarVisibility="Visible" >
 
-            <StackPanel Orientation="Vertical"  Background="BlueViolet"  >
+            <StackPanel Orientation="Vertical"     >
 
             <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0">
-                <TextBlock  Text="Nome della Ricetta" Style="{StaticResource TextStyleBaseTitle}" Margin="10" />
-                <TextBlock  Text="{Binding Path=RecipeName}" Style="{StaticResource TextStyleBase}" Margin="10" />
+                    <TextBlock   Text="{Binding Path=RecipeName}" Style="{StaticResource TextStyleBaseTitle}" Margin="10"   >
+                    </TextBlock>
             </StackPanel>
 
-            <ItemsControl x:Name="IngredientiRicetta" Background="BurlyWood" >
+                <ItemsControl x:Name="IngredientiRicetta" Background="BurlyWood" >
                 <ItemsControl.ItemsPanel>
                     <ItemsPanelTemplate>
                         <StackPanel Orientation="Vertical"  >
@@ -99,7 +102,7 @@
                     <DataTemplate>
 
 
-                        <local:IngredientControl HorizontalAlignment="Left" VerticalAlignment="Center"   />
+                        <local:IngredientControl HorizontalAlignment="Left" VerticalAlignment="Center"    />
 
 
                     </DataTemplate>
@@ -107,14 +110,24 @@
             </ItemsControl>
 
 
-            <TextBlock  Text="Step della Ricetta" Style="{StaticResource TextStyleBaseTitle}" Margin="10" />
+                <TextBlock  Text="Step della Ricetta"  Margin="10"   >
+
+                    <TextBlock.Style >
+                        <Style TargetType="TextBlock" BasedOn="{StaticResource TextStyleBaseTitle}">
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding RecipeName}" Value="{x:Null}">
+                                    <Setter Property="Visibility" Value="Collapsed" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </TextBlock.Style>
+
+                </TextBlock>
 
 
 
-            <StackPanel x:Name="IngredientStep" Orientation="Horizontal" >
 
-
-                <ItemsControl x:Name="StepRicetta" Background="BurlyWood" >
+                    <ItemsControl x:Name="StepRicetta" Background="BurlyWood"  >
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <StackPanel Orientation="Vertical"  >
@@ -134,13 +147,13 @@
                 </ItemsControl>
 
 
+                 
+
 
 
             </StackPanel>
 
-
-            </StackPanel>
-
+            
         </ScrollViewer>
 
 

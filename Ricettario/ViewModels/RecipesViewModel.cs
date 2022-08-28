@@ -12,10 +12,7 @@ using System.Windows.Input;
 namespace Ricettario.ViewModels
 {
 
-    /*
-     
-     trucco sul globakvars con osservable provare
-     */
+  
 
     public class RecipesViewModel : BaseViewModel
     {
@@ -247,7 +244,7 @@ namespace Ricettario.ViewModels
             }
             
 
-            GetIngredient(Ricette[0].Id.ToString());
+           // GetIngredient(Ricette[0].Id.ToString());
 
 
         }
@@ -289,30 +286,12 @@ namespace Ricettario.ViewModels
         public string RecipeName { get => recipeName; set => SetProperty(ref recipeName, value); }
 
 
-        protected bool SetProperty2<T>(ref T field, T newValue, [CallerMemberName] string propertyName = null)
-        {
-            if (!Equals(field, newValue))
-            {
-                field = newValue;
-                NotifyPropertyChanged(propertyName);
 
-                return true;
-            }
+        private string titleRecipeName;
 
-            return false;
-        }
+        public string TitleRecipeName { get => titleRecipeName; set => SetProperty(ref titleRecipeName, value); }
 
-        private bool _buttCancel;
 
-        public bool ButtCancel
-        {
-            get { return _buttCancel; }
-            set
-            {
-                _buttCancel = value;
-                NotifyPropertyChanged("ButtCancel");
-            }
-        }
 
     }
 }

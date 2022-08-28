@@ -16,7 +16,8 @@ namespace Ricettario.Models
 
         public string Minutes { get; set; } = "Tempo di preparazione: 20m. Tempo di cottura: 25m";
 
-        public string Name { get; set; } = "Risotto ai funghi porcini e salsiccia";
+        public string Name { get; set; } 
+            //"Risotto ai funghi porcini e salsiccia";
 
         public string People { get; set; } = "4";
 

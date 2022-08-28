@@ -1,4 +1,5 @@
 ﻿using Caliburn.Micro;
+
 using Ricettario.ViewModels;
 using System;
 using System.Windows;
@@ -14,6 +15,11 @@ namespace Ricettario
 
         protected override void OnStartup(object sender, StartupEventArgs e)
         {
+
+          
+
+           
+
             DisplayRootViewForAsync<RecipesViewModel>();
 
 

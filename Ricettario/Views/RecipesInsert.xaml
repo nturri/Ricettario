@@ -1,0 +1,139 @@
+﻿<Window x:Class="Ricettario.Views.RecipesInsert"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Ricettario.Views" xmlns:viewmodels="clr-namespace:Ricettario.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:RecipeInsertViewModel}"
+        
+        mc:Ignorable="d"
+        Title="RecipesInsert" Height="450" Width="800">
+
+    <Grid Margin="20"
+        MaxWidth="500"
+        Grid.IsSharedSizeScope="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0"
+            FontSize="28"
+            Text="Inserisci Nuova Ricetta" />
+
+
+        <Grid Grid.Row="1" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="Nome Ricetta" />
+            <TextBox Grid.Column="1" Margin="10 0 0 0"/>
+        </Grid>
+
+        <Grid Grid.Row="2" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="Livello" />
+            <ComboBox Grid.Column="1" Margin="10 0 0 0"
+                ItemsSource="{Binding LevelItems}"
+                SelectedItem="{Binding ItemName}" />
+        </Grid>
+
+        <Grid Grid.Row="3" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="Minuti" />
+            <TextBox Grid.Column="1" Margin="10 0 0 0" />
+        </Grid>
+
+
+        <Grid Grid.Row="4" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                <ColumnDefinition Width="100" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Column="0"
+                VerticalAlignment="Center"
+                Text="Persone" />
+            <TextBox Grid.Column="1" Margin="10 0 0 0"/>
+        </Grid>
+
+        <Grid Grid.Row="5" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+
+            <TextBlock Grid.Column="0" Grid.Row="0"
+                VerticalAlignment="Center"
+                Text="Ingredienti" />
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0" Width="auto">
+
+                <TextBox  Margin="10 0 0 0"  Width="300"/>
+
+
+                <Button  Margin="10,0,0,0" Command="{Binding Dettaglio, ElementName=root}"
+                        
+                        Width="50" Height="20" FontSize="8" 
+                        
+                        CommandParameter="{Binding}" >Inserisci</Button>
+                
+               
+
+            </StackPanel>
+
+            <ListBox Margin="10,5,0,0" Grid.Row="1" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
+
+        </Grid>
+
+
+        <StackPanel Grid.Row="7" Margin="0 20 0 0"
+            Orientation="Horizontal">
+            <Button Padding="10 5"
+                Command="{Binding InsertCommand}"
+                Content="Inserisci Ricetta" />
+         
+        </StackPanel>
+
+       
+
+        <StackPanel Grid.Row="8" Margin="0 20 0 0"
+            Orientation="Horizontal">
+            <TextBlock Foreground="Green" Text="{Binding StatusMessage}" />
+            <TextBlock Foreground="Red" Text="{Binding ErrorMessage}" />
+        </StackPanel>
+       
+    </Grid>
+
+
+</Window>
