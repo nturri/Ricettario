@@ -107,7 +107,7 @@
         
 
                 <Button Command="{Binding Dettaglio, ElementName=root}"
-                        CommandParameter="{Binding}">Dettaglio</Button>
+                        CommandParameter="{Binding}" Click="Button_Click">Dettaglio</Button>
 
 
                  

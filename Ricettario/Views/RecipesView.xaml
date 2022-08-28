@@ -12,7 +12,11 @@
          Title="Ricettario"
       Height="1024" Width="1600" Activated="Window_Activated">
 
-    <Grid>
+    <Grid MouseDown="Grid_MouseDown">
+
+
+    
+
 
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*" />
@@ -65,13 +69,9 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <local:RecipeControl HorizontalAlignment="Left" VerticalAlignment="Center" Dettaglio="{Binding Dettaglio}"  Items="{Binding Items}"  />
-                        
-                        <!--
-                        Dettaglio="{Binding Dettaglio}"
-                        -->
-                        
-                    </DataTemplate>
+                        <local:RecipeControl HorizontalAlignment="Left" VerticalAlignment="Center"   />
+
+                        </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
         </StackPanel>

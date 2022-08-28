@@ -84,6 +84,8 @@ namespace Ricettario.ViewModels
 
             GetRecipes();
 
+            GlobalVars.recipesViewModel = this;
+
         }
 
         public RecipesViewModel()
@@ -95,7 +97,7 @@ namespace Ricettario.ViewModels
 
             GetRecipes();
 
-
+            GlobalVars.recipesViewModel = this;
            
         }
 
@@ -157,6 +159,9 @@ namespace Ricettario.ViewModels
             ContentTask.Wait();
 
             var recipeFullModel = ContentTask.Result;
+
+
+            RecipeName = recipeFullModel.Name;
 
             /*if (IngredientiRicetta!=null)
             IngredientiRicetta.Clear();*/
@@ -240,16 +245,24 @@ namespace Ricettario.ViewModels
                 Ricette.Add(RicetteFull[i]);
                 Items.Add(RicetteFull[i]);
             }
-            RecipeName = Ricette[0].Name;
+            
 
             GetIngredient(Ricette[0].Id.ToString());
 
 
         }
 
+        public void setRicetta(string id)
+        {
+          
 
 
-        private void Items_CollectionChanbged(object sender, NotifyCollectionChangedEventArgs e)
+            GetIngredient(id);
+        }
+
+
+
+            private void Items_CollectionChanbged(object sender, NotifyCollectionChangedEventArgs e)
         {
             Console.WriteLine("");
 

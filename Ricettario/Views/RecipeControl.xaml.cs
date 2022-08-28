@@ -54,7 +54,7 @@ namespace Ricettario.Views
 
         }
 
-
+        /*
         #region Items
         public static readonly DependencyProperty ItemsProperty =
             DependencyProperty.Register(
@@ -67,9 +67,9 @@ namespace Ricettario.Views
             get { return (IEnumerable<RecipeModel>)GetValue(ItemsProperty); }
             set { SetValue(ItemsProperty, value); }
         }
-        #endregion
+        #endregion*/
 
-
+        /*
         #region Dettaglio
         public static readonly DependencyProperty DettaglioItemProperty =
             DependencyProperty.Register(
@@ -88,6 +88,16 @@ namespace Ricettario.Views
             set { SetValue(DettaglioItemProperty, value); }
         }
         #endregion*/
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            var model = DataContext as RecipeModel;
+
+
+            GlobalVars.recipesViewModel.setRicetta( model.Id.ToString());
+
+        }
     }
 
 }

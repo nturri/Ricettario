@@ -30,6 +30,11 @@ namespace Ricettario.Views
             IngredientStep.Children.Add(new Ricettario.Views.IngredientControl());
         }
 
+        private void OnMouseLeave(object sender, MouseEventArgs e)
+        {
+
+        }
+
         private void Window_Activated(object sender, EventArgs e)
         {
             ComboPage.SelectedIndex = 0;
@@ -39,6 +44,11 @@ namespace Ricettario.Views
         {
 
             Console.WriteLine();
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+
         }
     }
 }
