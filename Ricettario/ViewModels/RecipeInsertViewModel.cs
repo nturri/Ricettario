@@ -23,16 +23,21 @@ namespace Ricettario.ViewModels
 
         public ICommand SalvaRicetta { get; private set; }
 
-        public string recipeName { get; set; }
+        public string name { get; set; }
 
-        public string recipeMinutes { get; set; }
+        public string minutes { get; set; }
 
-        public string recipePeople { get; set; }
+        public string people { get; set; }
+
+        public string ingredientsAdditionalInfo { get; set; }
+
+        public string stepsAdditionalInfo { get; set; }
 
         public string ingredientsItem { get; set; }
 
+        public string stepsItem { get; set; }
 
-    private ObservableCollection<Level> _levels = new ObservableCollection<Level>
+        private ObservableCollection<Level> _levels = new ObservableCollection<Level>
        {
         new Level { Id=1, Name = "Facile"},
         new Level { Id=1, Name = "Medio"},
@@ -63,6 +68,8 @@ namespace Ricettario.ViewModels
         }
 
         public ObservableCollection<string> Ingredients { get; set; }
+
+        public ObservableCollection<StepModel> Steps { get; set; }
         public string selectedName { get; set; }
 
         public RecipeInsertViewModel()
@@ -93,7 +100,7 @@ namespace Ricettario.ViewModels
         private void saveMethod(object param)
         {
 
-            MessageBox.Show(recipeName);
+            MessageBox.Show(name);
 
         }
 

@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Ricettario.Views" xmlns:viewmodels="clr-namespace:Ricettario.ViewModels" d:DataContext="{d:DesignInstance Type=viewmodels:RecipeInsertViewModel}"
         
         mc:Ignorable="d"
-        Title="RecipesInsert" Height="450" Width="800">
+        Title="" Height="1000" Width="800">
 
     <Grid Margin="20"
         MaxWidth="500"
@@ -39,7 +39,7 @@
             <TextBlock Grid.Column="0"
                 VerticalAlignment="Center"
                 Text="Nome Ricetta" />
-            <TextBox Text="{Binding Path=recipeName, Mode=TwoWay}"  Grid.Column="1" Margin="10 0 0 0"/>
+            <TextBox Text="{Binding Path=name, Mode=TwoWay}"  Grid.Column="1" Margin="10 0 0 0"/>
         </Grid>
 
         <Grid Grid.Row="2" Margin="0 10 0 0">
@@ -70,7 +70,7 @@
             <TextBlock Grid.Column="0"
                 VerticalAlignment="Center"
                 Text="Minuti" />
-            <TextBox Text="{Binding Path=recipeMinutes, Mode=TwoWay}" Grid.Column="1" Margin="10 0 0 0" />
+            <TextBox Text="{Binding Path=minutes, Mode=TwoWay}" Grid.Column="1" Margin="10 0 0 0" />
         </Grid>
 
 
@@ -83,7 +83,7 @@
             <TextBlock Grid.Column="0"
                 VerticalAlignment="Center"
                 Text="Persone" />
-            <TextBox Text="{Binding Path=recipePeople, Mode=TwoWay}" Grid.Column="1" Margin="10 0 0 0"/>
+            <TextBox Text="{Binding Path=people, Mode=TwoWay}" Grid.Column="1" Margin="10 0 0 0"/>
         </Grid>
 
         <Grid Grid.Row="5" Margin="0 10 0 0">
@@ -116,15 +116,100 @@
 
             </StackPanel>
 
-            <!--
-            <ListBox Margin="10,5,0,0" Grid.Row="1" Grid.Column="1" d:ItemsSource="{d:SampleData ItemCount=5}"/>
--->
             <ListBox Margin="10,5,0,0" Grid.Row="1" Grid.Column="1" Height="200" x:Name="listBox" ItemsSource="{Binding Ingredients}" SelectedItem="{Binding selectedName, Mode=TwoWay}"/>
 
         </Grid>
 
 
-        <StackPanel Grid.Row="7" Margin="0 20 0 0"
+        <Grid Grid.Row="6" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+
+                <TextBlock 
+                VerticalAlignment="Center"
+                Text="Informazioni" />
+
+                <TextBlock 
+                VerticalAlignment="Center"
+                Text="Ricetta" />
+
+                <TextBlock 
+                VerticalAlignment="Center"
+                Text="Addizionali" />
+            </StackPanel>
+
+            <TextBox VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Path=ingredientsAdditionalInfo, Mode=TwoWay}" Grid.Column="1" Margin="10 0 0 0"/>
+         
+        </Grid>
+
+
+        <Grid Grid.Row="7" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+
+
+            <TextBlock Grid.Column="0" Grid.Row="0"
+                VerticalAlignment="Center"
+                Text="Steps" />
+
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="0" Width="auto">
+
+                <TextBox  Text="{Binding Path=stepsItem, Mode=TwoWay}"  Margin="10 0 0 0"  Width="300"/>
+
+
+                <Button  Margin="10,0,0,0" Command="{Binding Path=InsertStep}"
+                        
+                        Width="50" Height="20" FontSize="9" 
+                        
+                        CommandParameter="{Binding}" >Inserisci</Button>
+
+
+            </StackPanel>
+
+            <ListBox Margin="10,5,0,0" Grid.Row="1" Grid.Column="1" Height="200" x:Name="listBox2" ItemsSource="{Binding Ingredients}" SelectedItem="{Binding selectedName, Mode=TwoWay}"/>
+
+        </Grid>
+
+
+        <Grid Grid.Row="8" Margin="0 10 0 0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" SharedSizeGroup="Label" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+
+                <TextBlock 
+                VerticalAlignment="Center"
+                Text="Informazioni" />
+
+                <TextBlock 
+                VerticalAlignment="Center"
+                Text="Step" />
+
+                <TextBlock 
+                VerticalAlignment="Center"
+                Text="Addizionali" />
+            </StackPanel>
+
+            <TextBox VerticalScrollBarVisibility="Visible" AcceptsReturn="True" TextWrapping="Wrap" Text="{Binding Path=stepsAdditionalInfo, Mode=TwoWay}" Grid.Column="1" Margin="10 0 0 0"/>
+
+        </Grid>
+
+
+
+        <StackPanel Grid.Row="9" Margin="0 20 0 0"
             Orientation="Horizontal">
             <Button Padding="10 5" Command="{Binding Path=SalvaRicetta}" Content="Inserisci Ricetta" />
          
