@@ -12,14 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
-namespace Ricettario.Dialog
+namespace Ricettario.Views
 {
     /// <summary>
-    /// Logica di interazione per Window1.xaml
+    /// Logica di interazione per WindowServiceView.xaml
     /// </summary>
-    public partial class Window1: Window
+    public partial class WindowServiceView : Window
     {
-        public Window1()
+        public WindowServiceView()
         {
             InitializeComponent();
         }

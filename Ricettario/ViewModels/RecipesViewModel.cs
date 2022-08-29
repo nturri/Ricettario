@@ -45,7 +45,7 @@ namespace Ricettario.ViewModels
 
 
 
-        public ICommand Dettaglio { get; private set; }
+        public ICommand Inserisci { get; private set; }
 
 
         public ObservableCollection<RecipeModel> Items { get; private set; }
@@ -88,7 +88,7 @@ namespace Ricettario.ViewModels
         public RecipesViewModel()
         {
 
-            Dettaglio = new RelayCommand(dettaglioMethod, dettaglioCanExec);
+            Inserisci = new RelayCommand(inserisciMethod, inserisciCanExec);
 
             Pages = new ObservableCollection<Page>();
 
@@ -98,14 +98,18 @@ namespace Ricettario.ViewModels
            
         }
 
-        private void dettaglioMethod(object param)
+        private void inserisciMethod(object param)
         {
+
+            
+
+            WindowService.ShowDialog2();
 
         }
 
-        private bool dettaglioCanExec(object param)
+        private bool inserisciCanExec(object param)
         {
-            return false; 
+            return true; 
         }
 
         public void Aggiorna()

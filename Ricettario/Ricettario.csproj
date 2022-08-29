@@ -126,12 +126,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Bootstrapper.cs" />
-    <Compile Include="Dialog\Window1.xaml.cs">
-      <DependentUpon>Window1.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Dialog\WindowService2.cs" />
     <Compile Include="GlobalVars.cs" />
     <Compile Include="Models\IngredientModel.cs" />
+    <Compile Include="Models\Level.cs" />
     <Compile Include="Models\Page.cs" />
     <Compile Include="Models\RecipeFullModel.cs" />
     <Compile Include="Models\RecipeModel.cs" />
@@ -166,10 +163,9 @@
     <Compile Include="Views\StepControl.xaml.cs">
       <DependentUpon>StepControl.xaml</DependentUpon>
     </Compile>
-    <Page Include="Dialog\Window1.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
+    <Compile Include="Views\WindowServiceView.xaml.cs">
+      <DependentUpon>WindowServiceView.xaml</DependentUpon>
+    </Compile>
     <Page Include="Style\Styles.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -201,6 +197,10 @@
     <Page Include="Views\Templates.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Views\WindowServiceView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>

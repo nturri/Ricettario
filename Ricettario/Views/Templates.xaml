@@ -15,7 +15,9 @@
     <DataTemplate DataType="{x:Type vm:RecipesViewModel}">
         <local:RecipesView />
     </DataTemplate>
-    
-   
+
+    <DataTemplate DataType="{x:Type vm:RecipeInsertViewModel}">
+        <local:RecipesInsert />
+    </DataTemplate>
 
 </ResourceDictionary>

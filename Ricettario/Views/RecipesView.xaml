@@ -36,7 +36,7 @@
 
 
 
-            <Button x:Name="Aggiungi" Margin="10" >AGGIUNGI RICETTA</Button>
+            <Button  Command="{Binding Path=Inserisci}" x:Name="Aggiungi" Margin="10" >AGGIUNGI RICETTA</Button>
 
             <Button x:Name="Aggiorna" Margin="10" >AGGIORNA</Button>
 
